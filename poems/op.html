@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POEMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon"
+        href="../apple-touch-icon.png"
+        type="image/x-icon" />
+    <style>
+        /* Styling for the image, text, and heading in the new page */
+        /* Styling for the image, text, and heading in the new page */
+        body {
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            overflow-x: hidden;
+            background-color: #000000;
+        }
+
+        body::-webkit-scrollbar {
+            display: block;
+            width: 0px;
+            background: #000000;
+        }
+
+        .cursor {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            position: fixed;
+            background-color: #EDBFFF;
+            z-index: 8;
+            transition: background-image ease 0.5s;
+            background-position: center;
+            background-size: cover;
+            mix-blend-mode: difference;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            left: 100;
+            overflow: auto;
+
+        }
+
+        .cur {
+            mix-blend-mode: difference;
+            font-weight: 900;
+            z-index: 102;
+        }
+
+        .topnav {
+            /* background-color: #333; */
+            overflow: hidden;
+            /* border-bottom: 1px solid rgba(255, 255, 255, .1); */
+            z-index: 1000;
+            position: fixed;
+            width: 100%;
+            mix-blend-mode: difference;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #conne {
+            font-size: 1.8vw;
+            float: right;
+        }
+
+        #abtnav {
+            font-size: 1.2vw;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            #conne {
+                font-size: 5vw;
+            }
+        }
+
+        @media (max-width: 667px) {
+            #conne {
+                font-size: 5vw;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            #abtnav {
+                font-size: 5vw;
+            }
+        }
+
+        @media (max-width: 667px) {
+            #abtnav {
+                font-size: 5vw;
+            }
+        }
+
+        .topnav h1 {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+
+            margin: 0, -100px;
+            padding: 14px -16px;
+            padding-left: 10px;
+            text-decoration: none;
+            font-size: 19px;
+            margin-right: 50%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #ffffff;
+
+
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav .anc {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+
+            color: rgb(255, 130, 255);
+        }
+
+        /* Add an active class to highlight the current page */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+        }
+        #home{
+    font-size: 1.8vw;
+}
+        @media (min-width: 768px) and (max-width: 991px) {
+    #home {
+        font-size: 5vw;
+  }
+}
+  @media (max-width: 667px) {
+    #home {
+        font-size: 5vw;
+  }}
+
+        .topnav span {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 50px;
+            background: linear-gradient(90deg, transparent, #fff);
+            animation: animate 5s infinite linear;
+        }
+
+
+        @keyframes animate {
+            0% {
+                left: 0;
+                transform: translate(-100%);
+            }
+
+            100% {
+                left: 100%;
+                transform: translate(0%);
+            }
+        }
+
+
+        .fullscreen {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow content to wrap on smaller screens */
+            justify-content: space-evenly;
+            /* Center content horizontally */
+            background-color: #000000;
+            min-height: 100vh;
+            width: 100vw;
+        }
+
+        .image-container,
+        .middle-container,
+        .heading-container {
+            flex-basis: 100%;
+            /* Initially take up full width on small screens */
+            padding: 10px;
+            box-sizing: border-box;
+            /* Include padding in element size */
+            text-align: center;
+            /* Center align text and heading */
+        }
+
+        @media (min-width: 768px) {
+
+            .image-container,
+            .middle-container,
+            .heading-container {
+                flex-basis: calc(40% - 40px);
+                /* One-third of the screen width minus padding */
+            }
+        }
+
+        .image {
+            width: 40%;
+            height: 80%;
+            position: fixed;
+            top: 10%;
+            right: 55%;
+            border-radius: 3%;
+        }
+
+        .text {
+            position: relative;
+            top: 5%;
+            font-size: 20px;
+            width: 100%;
+            left: 100%;
+            padding-left: 40%;
+        }
+
+        .heading {
+            position: relative;
+            top: 5%;
+            left: 100%;
+            padding-left: 20%;
+            width: 120%;
+            font-size: 82px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(222, 92, 255);
+        }
+
+        @media (max-width: 668px) {
+            .fullscreen {
+                display: flex;
+                flex-wrap: wrap;
+                /* Allow content to wrap on smaller screens */
+                justify-content: space-evenly;
+                /* Center content horizontally */
+                background-color: #000000;
+                min-height: 100vh;
+                width: 100vw;
+                justify-content: center;
+            }
+
+            /* Adjust styles for smaller screens */
+            .image {
+                width: 90%;
+                height: 50%;
+                position: absolute;
+                top: 15%;
+                left: 5%;
+                border-radius: 3%;
+            }
+
+            .text {
+                position: relative;
+                top: 38%;
+                padding: 0%;
+                font-size: 4.2vw;
+                width: 100%;
+                left: 1%;  
+                text-align: center;
+                margin: 0%;
+            }
+
+            .heading {
+
+                position: relative;
+                top: 35%;
+                padding-top: 79%;
+                
+                font-size: 42px;
+                font-weight: bold;
+                color: transparent;
+                width: 100%;
+                left: -5%;
+            -webkit-text-stroke: 2px rgb(222, 92, 255);
+            }
+        }
+
+        @media  (min-width: 768px) and (max-width: 958px) {
+            .image {
+            width: 40%;
+            height: 50%;
+            position: fixed;
+            top: 10%;
+            right: 55%;
+            border-radius: 3%;
+        }
+
+        .text {
+            position: relative;
+            top: 5%;
+            font-size: 20px;
+            width: 150%;
+            left: 100%;
+            padding-left: 40%;
+        }
+
+        .heading {
+            position: relative;
+            width: 150%;
+            top: 5%;
+            left: 100%;
+            padding-left: 20%;
+            width: 150%;
+            font-size: 82px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(222, 92, 255);
+        }
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor">
+        <p id="cur"></p>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <span class="navbar-logo"></span>
+
+        <a href="../about.html">
+            <h1 class="navbar-title">SOHAN SAHOO</h1>
+        </a>
+        <!-- <a class="anc" href="index.html"><i id="home" class="fa fa-home"></i></a> -->
+
+
+        <a class="anc" href="../index.html"><i id="home" class="fa fa-home"></i></a>
+        <a class="anc" id="abtnav" href="../connect.html">
+            Connect
+        </a>
+    </div>
+    <div class="fullscreen">
+        <!-- Container for the heading -->
+        <div class="heading-container">
+            <!-- JavaScript to retrieve and display heading data from query parameters -->
+            <div class="heading" id="heading">
+                Loading...
+            </div>
+            <div class="text" id="text">
+                Loading...
+            </div>
+        </div>
+    
+        <!-- Container for the image -->
+        <div class="image-container">
+            <!-- JavaScript to retrieve image data from query parameters -->
+            <img class="image" src="" alt="Image" id="image">
+        </div>
+    
+        <!-- Container for the text -->
+        <div class="text-container">
+            <!-- JavaScript to retrieve and display text data from query parameters -->
+            
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+        // JavaScript to retrieve and display image, text, and heading data from query parameters
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const imageUrl = urlParams.get('image');
+        const textContent = decodeURIComponent(urlParams.get('text'));
+        const headingContent = decodeURIComponent(urlParams.get('heading'));
+
+        const imageElement = document.getElementById('image');
+        const textElement = document.getElementById('text');
+        const headingElement = document.getElementById('heading');
+
+        if (imageUrl) {
+            imageElement.src = imageUrl;
+        }
+
+        if (textContent) {
+            if (textContent) {
+                // Replace \n with <br> for line breaks
+                textElement.innerHTML = textContent.replace(/\n/g, '<br>');
+            }
+        }
+
+        if (headingContent) {
+            headingElement.textContent = headingContent;
+        }
+
+        var crsr=document.querySelector(".cursor")
+var main=document.querySelector(".main")
+document.addEventListener("mousemove",function(dets){
+    crsr.style.left=dets.x+1+"px";
+    crsr.style.top=dets.y+1+"px";
+})
+
+    </script>
+</body>
+
+</html>
