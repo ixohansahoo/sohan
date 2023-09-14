@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECT</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="connect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="shortcut icon"
+        href="apple-touch-icon.png"
+        type="image/x-icon" />
+
+
+</head>
+
+<body>
+    <div class="cursor">
+        <p id="cur"></p>
+    </div>
+    <div class="topnav" id="myTopnav" >
+        <span class="navbar-logo" ></span>
+        <a href="about.html" >
+            <h1 class="navbar-title">SOHAN SAHOO</h1>
+        </a>
+        <a id="myhome" class="anc" href="index.html"><i class="fa fa-home" ></i></a>
+        <!-- <a href="about.html"><i id="home" class="fa fa-search-minus" ></i</a> -->
+
+        <a id="abtnav" class="anc" href="about.html" >About</a>
+
+    </div>
+    <!-- <div class="co"></div> -->
+    <div id="video-container" >
+        <video id="con_vid" src="connect.mp4" autoplay loop muted></video>
+        <div id="dark-overlay"></div>
+        <div id="blurred-form">
+            <form id="myForm">
+                <h1 id="formh1">Care to sprinkle a bit of stardust on my work? <br><span id="ngl">(Send Me NGL)</span></h1>
+                <!-- <input class="form-input" type="text" placeholder="Name" name="name">
+                <input class="form-input" type="email" placeholder="Email" name="email">
+                <textarea class="form-input" id="inputcn" name="message" placeholder="THOUGHTS?"></textarea> -->
+                <!-- <input type="hidden" id="nglLink" name="nglLink" value="https://ngl.link/ixohansahoo"> -->
+                <button class="form-input" id="fbt" type="button" onclick="ngl()">NOT GONNA LIE</button>
+            </form>
+        </div>
+        <div id="overlay" >
+            <div class="button-container" >
+                <h1 id="ch1">Connect with me through these channels, because let's face it – coding alone is just too
+                    mainstream</h1>
+                <button class="button" onclick="ig()" >
+                    <i id="icons" class="fab fa-instagram" style='color:#ff002b'></i></i> <br> Instagram</button>
+                <button class="button" onclick="liin()" >
+                    <i id="icons" class='fab fa-linkedin-in' style='color:#0077b5'></i> <br> Linked-in</button>
+            </div>
+            <div class="button-container">
+                <button class="button" onclick="ml()" ><i id="icons" class="fas fa-envelope" style='color:#fff'></i> <br>
+                    Mailll</button>
+                <button class="button" onclick="fb()" ><i id="icons" class="fab fa-facebook" style='color:#3b5998'></i>Facebook</button>
+            </div>
+        </div>
+        <div class="con_mes">
+            <h1 id="conh1">connect</h1>
+            <!-- <h3 id="conh3">Got a question burning hotter than a thousand CPU cores? Or perhaps a joke that even the quirkiest
+                compiler would appreciate? Fear not, for I'm just a virtual shout away from answering your queries,
+                Let's have a good ol' tête-à-tête, shall we?
+
+                </h3> -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="connect.js"></script>
+</body>
+
+</html>
