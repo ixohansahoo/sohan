@@ -1,0 +1,229 @@
+body {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background-color: #141414;
+}
+
+/* Hide the scrollbar */
+body::-webkit-scrollbar {
+    display: block;
+    width: 0px;
+    background: #000000;
+}
+
+/* Styles for the cursor element */
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: difference;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 100;
+    overflow: auto;
+}
+
+/* Additional styles for the cursor text */
+.cur {
+    mix-blend-mode: difference;
+    font-weight: 900;
+    z-index: 102;
+}
+
+/* Styles for the top navigation bar */
+.topnav {
+    overflow: hidden;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    mix-blend-mode: difference;
+}
+
+/* Reset margins, padding, and box-sizing for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the connect button */
+#conne {
+    font-size: 1.8vw;
+    float: right;
+}
+
+/* Styles for the about button */
+#abtnav {
+    font-size: 1.2vw;
+}
+
+/* Responsive styles for connect and about buttons on smaller screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    #conne {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 667px) {
+    #conne {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #abtnav {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 667px) {
+    #abtnav {
+        font-size: 5vw;
+    }
+}
+
+/* Styles for the navigation bar title */
+.topnav h1 {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    margin: 0, -100px;
+    padding: 14px -16px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 19px;
+    margin-right: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+}
+
+/* Styles for the links inside the navigation bar */
+.topnav .anc {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: rgb(255, 130, 255);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Create an animated bar at the bottom of the navigation bar */
+.topnav span {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: animate 5s infinite linear;
+}
+
+/* Keyframes animation for the bar */
+@keyframes animate {
+    0% {
+        left: 0;
+        transform: translate(-100%);
+    }
+    100% {
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+#content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    overflow: hidden; /* Add overflow hidden to the content container */
+    position: relative; /* Add relative positioning to the content container */
+}
+#content a {
+    text-decoration: none;
+    
+}
+#content a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(240, 216, 0);;
+    text-underline-offset: 2px; 
+    text-decoration-skip: none;
+    
+}
+
+#image {
+    margin-top: 8vh;
+    width: 50vw;
+    height: 65vh;
+    transition: transform 0.5s ease-in-out; 
+    
+}
+@media (max-width: 668px) {
+    #image {
+        margin-top: 20vh;
+        width: 80vw;
+        height:45vh;
+        transition: transform 0.5s ease-in-out; 
+        
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #image {
+        margin-top: 12vh;
+        width: 80vw;
+        height:65vh;
+        transition: transform 0.5s ease-in-out; 
+        
+    }
+}
+
+#text {
+    font-size: 24px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    display: block;
+}
+
+/* Add this CSS to your existing styles.css file */
+.ic {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Space evenly horizontally */
+    
+}
+
+#prevBtn,
+#nextBtn {
+    cursor: pointer;
+
+}
+#prevBtn{
+    padding-right: 10%;
+}
+#nextBtn{
+    padding-left: 10%;
+}
