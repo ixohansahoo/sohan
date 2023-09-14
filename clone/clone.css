@@ -1,0 +1,566 @@
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 0px;
+    background: #000000;
+  }
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size:cover ;
+    mix-blend-mode: difference;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 100;
+    overflow: auto;
+
+}
+.cur{
+    mix-blend-mode: difference;
+    font-weight: 900;
+    z-index: 102;
+}
+.topnav {
+    /* background-color: #333; */
+    overflow: hidden;
+    /* border-bottom: 1px solid rgba(255, 255, 255, .1); */
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    mix-blend-mode: difference;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.topnav h1{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+  margin-right: 50%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #ffffff;
+
+
+}
+  /* Style the links inside the navigation bar */
+  .topnav .anc {
+    float:right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+
+
+  }
+  #myhome{
+    font-size: 1.8vw;
+}
+
+#abtnav{
+  font-size: 1.2vw;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #myhome {
+      font-size: 5vw;
+}
+}
+@media (max-width: 667px) {
+  #myhome {
+      font-size: 5vw;
+}}
+@media (min-width: 768px) and (max-width: 991px) {
+  #abtnav {
+      font-size: 5vw;
+}
+}
+@media (max-width: 667px) {
+  #abtnav {
+      font-size: 5vw;
+}}
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+
+    color: rgb(255, 130, 255);
+  }
+
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+.topnav span{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(90deg , transparent , #fff);
+    animation: animate 5s infinite linear;
+}
+
+
+@keyframes animate {
+    0%{
+        left: 0;
+        transform: translate(-100%);
+    }
+    100%{
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+  #con_vid{
+    /* height: 100vh; */
+    width: 100vw;
+
+}body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
+  }
+
+  #video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  .con_mes {
+    position: absolute;
+    top: 6%;
+    width: 80%;
+    left: 10px;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .con_mes {
+        position: absolute;
+    top: 10%;
+    width: 80%;
+    left: 5%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+  }
+
+}
+  @media (max-width: 767px) {
+    .con_mes {
+        position: absolute;
+    top: 17%;
+    width: 80%;
+    left: 0%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+    }
+}
+
+
+.con_mes1 {
+    position: absolute;
+    top: 75%;
+    width: 80%;
+    left: 10px;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .con_mes1 {
+        position: absolute;
+    top: 75%;
+    width: 80%;
+    left: 5%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+  }
+
+}
+  @media (max-width: 767px) {
+    .con_mes1 {
+        position: absolute;
+    top: 85%;
+    width: 80%;
+    left: 0%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+    }
+}
+
+.con_mes2 {
+    position: absolute;
+    top: 35%;
+    width: 80%;
+    left: 65%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .con_mes2 {
+        position: absolute;
+    top: 35%;
+    width: 80%;
+    left: 45%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+  }
+
+}
+  @media (max-width: 767px) {
+    .con_mes2 {
+        position: absolute;
+    top: 45%;
+    width: 80%;
+    left: 45%;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* backdrop-filter: blur(10px); */
+    /* mix-blend-mode: difference; */
+    color: rgba(255, 255, 255, 0.623);
+    z-index: 5;
+    }
+}
+  .button:hover {
+    color: #ffffff; /* Change the color on hover */
+    text-shadow: 0 0 10px #ffffff; /* Add a glowing effect using text-shadow on hover */
+    animation: glow-animation 1s infinite alternate; /* Animation for additional glow effect */
+  }
+
+  @keyframes glow-animation {
+    from {
+      text-shadow: 0 0 10px #ffffff80;
+    }
+    to {
+      text-shadow: 0 0 10px #fad4d48e;
+    }
+  }
+  #conh1{
+      /* margin-bottom: 30%; */
+      font-size: 7vw;
+      width: 30vw;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #conh1 {
+
+        font-size: 12vw;
+        width: 30vw;
+    }
+
+}
+  @media (max-width: 767px) {
+    #conh1 {
+
+        font-size: 12vw;
+        width: 30vw;
+    }
+}
+
+  #conh1:hover {
+    color: #ffffff; /* Change the color on hover */
+    text-shadow: 0 0 10px #ffffff; /* Add a glowing effect using text-shadow on hover */
+    animation: glow-animation 1s infinite alternate; /* Animation for additional glow effect */
+  }
+
+
+  #con2h1{
+    /* margin-bottom: 30%; */
+    font-size: 9vw;
+    width: 30vw;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #con2h1 {
+
+      font-size: 12vw;
+      width: 30vw;
+  }
+
+}
+@media (max-width: 767px) {
+  #con2h1 {
+
+      font-size: 12vw;
+      width: 30vw;
+  }
+}
+
+#con2h1:hover {
+  color: #ffffff; /* Change the color on hover */
+  text-shadow: 0 0 10px #ffffff; /* Add a glowing effect using text-shadow on hover */
+  animation: glow-animation 1s infinite alternate; /* Animation for additional glow effect */
+}
+
+
+
+#con3h1{
+    /* margin-bottom: 30%; */
+    font-size: 5vw;
+    width: 30vw;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #con3h1 {
+
+      font-size: 11vw;
+      width: 30vw;
+  }
+
+}
+@media (max-width: 767px) {
+  #con3h1 {
+
+      font-size: 11vw;
+      width: 30vw;
+  }
+}
+
+#con3h1:hover {
+  color: #ffffff; /* Change the color on hover */
+  text-shadow: 0 0 10px #ffffff; /* Add a glowing effect using text-shadow on hover */
+  animation: glow-animation 1s infinite alternate; /* Animation for additional glow effect */
+}
+
+
+
+  @keyframes glow-animation {
+    from {
+      text-shadow: 0 0 10px #ffffff86;
+    }
+    to {
+      text-shadow: 0 0 10px #ffffffbd;
+    }
+  }
+
+a{
+    text-decoration: none;
+    color: #b3b3b3b6;
+}
+
+
+  #conh3{
+      /* background-color: #83918c; */
+      font-size: 2vw;
+
+      background-color: rgba(0, 0, 0, 0.2);
+  }
+  @media (max-width: 767px) {
+  #conh3{
+    font-size: 2vw;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}}
+  #dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    z-index: 2;
+  }
+  #blurred-form {
+    position: fixed;
+    bottom: 20px;
+    right: 1%;
+    /* backdrop-filter: blur(10px); */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    width: 25%;
+
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #blurred-form{
+        position: fixed;
+    bottom: 1%;
+    right: 1%;
+    /* backdrop-filter: blur(10px); */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    width: 45%;
+  }
+
+}
+  @media (max-width: 767px) {
+    #blurred-form {
+        position: fixed;
+    bottom: 11%;
+    right: 1%;
+    /* backdrop-filter: blur(10px); */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    width: 45%;
+  }}
+
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.26);
+    /* color: RED; */
+    resize: none;
+
+
+  }
+
+  #blurred-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+
+    color: rgba(255, 255, 255, 0.9);
+  }
+  @media (max-width: 767px) {
+    #blurred-form input{
+        width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+
+    color: rgba(255, 255, 255, 0.9);
+  }}
+  .form-input[type="text"], .form-input[type="email"] {
+    background-color: rgba(255, 255, 255, 0.164); /* Transparent white background */
+    color: #333; /* Text color */
+
+  }
+  .form-input[type="text"]::placeholder,
+  .form-input[type="email"]::placeholder,
+  .form-input[type="email"]::placeholder {
+    color: #999; /* Placeholder text color */
+
+  }
+  .form-input[type="textarea"] {
+    /* Transparent black background */
+
+    resize: none; /* Remove resizing handle */
+  }
+  #formh1{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2vw;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #formh1{
+        color: rgba(255, 255, 255, 0.9);
+        font-size:4vw;
+  }
+
+}
+  @media (max-width: 767px) {
+    #formh1{
+        color: rgba(255, 255, 255, 0.9);
+        font-size:4vw;
+  }}
+
+  #inputcn{
+      color: rgb(255, 255, 255);
+      height: 10vh;
+  }
+  #ch1{
+
+      font-size: 2vw;
+  }
+  @media (max-width: 767px) {
+    #ch1{
+      font-size: 4vw;
+
+      background-color: rgba(0, 0, 0, 0.2);
+  }}
+  @media (min-width: 768px) and (max-width: 991px) {
+    #ch1{
+        color: rgba(255, 255, 255, 0.9);
+        font-size:3vw;
+  }
+
+}
+  @media (max-width: 767px) {
+    #icons{
+        font-size:25px;
+        color:#fff'
+
+  }}
+ #icons{
+    font-size:55px;
+    color:#fff'
+ }
+ @media (max-width: 280px) {
+    #icons{
+        font-size:45px;
+    color:#fff'
+  }}
